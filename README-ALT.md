@@ -1,6 +1,6 @@
 # Add Tag Command
 
-> The following document applies to the command-line usage of `add-hcl-tag`.  For usage directly in a Node application, please see the [alternate README located here](README-ALT.md).
+> The following document applies to the command-line usage of `add-hcl-tag`.  For usage from the command line, please see the [main README located here](README.md).
 
 ## Purpose  
 
@@ -14,36 +14,19 @@ npm i @hclutils/add-hcl-tag
 
 ## Usage
 
-If you've installed the utilities:
+```javascript
+const aht = require('@hclutils/add-hcl-tag');
 
-```bash  
-add-hcl-tag \
-  --file "/MyIaC/terraform.tf" \
-  --node "resource.aws_vpc.*" \
-  --name "Project" \
-  --value "Hackathon 2024"
-```
-
-... or ...
-
-```bash  
-npx add-hcl-tag \
-  --file "/MyIaC/terraform.tf" \
-  --node "resource.aws_vpc.*" \
-  --name "Project" \
-  --value "Hackathon 2024"
-```
-
-... produces this:
-
-```bash
-Updates: 3
-- resources.aws_vpc.vpc1
-- resources.aws_vpc.vpc2
-- resources.aws_vpc.vpc3
+const results = aht.processOptions({
+  file : "/MyIaC/terraform.tf" \
+  node : "resource.aws_vpc.*" \
+  name : "Project" \
+  value: "Hackathon 2024"
+});
 ```
 
 ### Parameters  
+
 
 | Name        | Description                                | Type            | Default |
 |-------------|--------------------------------------------|-----------------|---------|

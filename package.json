@@ -1,0 +1,50 @@
+{
+  "name"        : "@hclutils/add-tag",
+  "version"     : "0.0.0",
+  "description" : "Add a tag to nodes in an HCL file.",
+  "main"        : "src/index.js",
+  "preferGlobal": true,
+  "bin"         : {
+    "add-hcl-tag": "src/cli.mjs"
+  },
+  "scripts": {
+    "lint"        : "eslint ./src",
+    "lint:fix"    : "eslint ./src --fix src/**/*.js",
+    "markdown"    : "node ./src/command.js --markdown",
+    "markdown:cli": "node ./src/command.js --markdown-cli"
+  },
+  "repository": {
+    "type": "git",
+    "url" : "git+https://github.com/HCLUtils/add-tag.git"
+  },
+  "keywords": [
+    "files",
+    "types",
+    "find"
+  ],
+  "author": {
+    "name" : "Fred Lackey",
+    "email": "fred.lackey@gmail.com",
+    "url"  : "http://www.fredlackey.com"
+  },
+  "license": "Apache-2.0",
+  "bugs"   : {
+    "url": "https://github.com/HCLUtils/add-tag/issues"
+  },
+  "homepage"    : "https://github.com/HCLUtils/add-tag#readme",
+  "dependencies": {
+    "yargs": "^17.7.2"
+  },
+  "devDependencies": {
+    "eslint"                   : "^8.57.0",
+    "eslint-config-airbnb"     : "^19.0.4",
+    "eslint-config-standard"   : "^17.1.0",
+    "eslint-plugin-import"     : "^2.29.1",
+    "eslint-plugin-jsx-a11y"   : "^6.8.0",
+    "eslint-plugin-node"       : "^11.1.0",
+    "eslint-plugin-promise"    : "^6.2.0",
+    "eslint-plugin-react"      : "^7.34.2",
+    "eslint-plugin-react-hooks": "^4.6.2",
+    "eslint-plugin-standard"   : "^5.0.0"
+  }
+}
